@@ -30,8 +30,8 @@
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white rounded-md hover:text-gray-700 focus:outline-none">
 
-                            <img src="{{ asset('images/avatars/' . (Auth::user()->avatar ?? 'avatar1.png')) }}"
-                                 class="h-8 w-8 rounded-full mr-2 cursor-pointer">
+                            <img src="{{ asset('images/avatars/avatar' . ((Auth::id() % 2) + 1) . '.png') }}"
+     class="h-8 w-8 rounded-full mr-2">
 
                             <div>{{ Auth::user()->name }}</div>
 
